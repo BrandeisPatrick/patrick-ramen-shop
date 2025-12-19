@@ -1,0 +1,4 @@
+{
+  "buildCommand": "NODE_OPTIONS=--openssl-legacy-provider webpack --config ./bundler/webpack.prod.js",
+  "outputDirectory": "dist"
+}
