@@ -587,7 +587,7 @@ export default class Controller
         {
             if(this.logic.buttonsLocked === false && (this.logic.mode === 'aboutMe' || this.logic.mode === 'skills' || this.logic.mode === 'experience'))
             {
-                window.open('https://twitter.com/Jessezhouu', '_blank');
+                window.open('https://twitter.com/BrandeisPatrick', '_blank');
             }
             
         }
@@ -596,7 +596,7 @@ export default class Controller
         {
             if(this.logic.buttonsLocked === false && (this.logic.mode === 'aboutMe' || this.logic.mode === 'skills' || this.logic.mode === 'experience'))
             {
-                window.open('https://www.linkedin.com/in/jessezhou1998', '_blank');
+                window.open('https://www.linkedin.com/in/patrick-pinyuan-li', '_blank');
             }
             
         }
@@ -605,7 +605,7 @@ export default class Controller
         {
             if(this.logic.buttonsLocked === false && (this.logic.mode === 'aboutMe' || this.logic.mode === 'skills' || this.logic.mode === 'experience'))
             {
-                window.open('https://github.com/enderh3art', '_blank');
+                window.open('https://github.com/BrandeisPatrick', '_blank');
             }
             
         }
@@ -614,7 +614,7 @@ export default class Controller
         {
             if(this.logic.buttonsLocked === false && (this.logic.mode === 'aboutMe' || this.logic.mode === 'skills' || this.logic.mode === 'experience'))
             {
-                window.open('https://medium.com/@jesse-zhou', '_blank');
+                window.open('https://github.com/BrandeisPatrick', '_blank');
             }
             
         }
@@ -623,7 +623,7 @@ export default class Controller
         {
             if(this.logic.buttonsLocked === false && (this.logic.mode === 'aboutMe' || this.logic.mode === 'skills' || this.logic.mode === 'experience'))
             {
-                window.location.href='mailto:jessezhouu@gmail.com'
+                window.location.href='mailto:brandeispatrick@outlook.com'
             }
             
         }

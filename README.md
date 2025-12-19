@@ -1,3 +1,10 @@
+# Patrick's Ramen
+
+A 3D interactive ramen shop experience.
+
+**Pinyuan Li** - Head of ML Engineering @ JustLabs
+[GitHub](https://github.com/BrandeisPatrick) • [LinkedIn](https://linkedin.com/in/patrick-pinyuan-li) • brandeispatrick@outlook.com
+
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
 Run the following commands:

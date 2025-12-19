@@ -114,7 +114,8 @@ export default class RamenShop
             this.floor.material = this.materials.floorMaterial
             this.misc.material = this.materials.miscMaterial
             this.graphics.material = this.materials.graphicsMaterial
-            this.jesseZhouJoined.material = this.materials.whiteSignMaterial
+            // Hide Jesse Zhou text
+            this.jesseZhouJoined.visible = false
 
             // Moving Objects
             this.fan1.material = this.materials.fanMatcapMaterial
@@ -127,8 +128,9 @@ export default class RamenShop
             this.projectsWhite.material = this.materials.whiteSignMaterial
             this.articlesWhite.material = this.materials.whiteSignMaterial
             this.articlesRed.material = this.materials.redSignMaterial
-            this.jZhouBlack.material = this.materials.blackSignMaterial
-            this.jZhouPink.material = this.materials.pinkSignMaterial
+            // Hide j zhou button
+            this.jZhouBlack.visible = false
+            this.jZhouPink.visible = false
             this.aboutMeBlack.material = this.materials.blackSignMaterial
             this.aboutMeBlue.material = this.materials.blueSignMaterial
             this.creditsBlack.material = this.materials.blackSignMaterial

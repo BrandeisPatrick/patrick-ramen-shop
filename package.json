@@ -1,9 +1,11 @@
 {
-  "repository": "#",
+  "name": "patricks-ramen",
+  "author": "Pinyuan Li <brandeispatrick@outlook.com>",
+  "repository": "https://github.com/BrandeisPatrick/Ramen-Shop",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "webpack --config ./bundler/webpack.prod.js",
-    "dev": "webpack serve --config ./bundler/webpack.dev.js",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && webpack --config ./bundler/webpack.prod.js",
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && webpack serve --config ./bundler/webpack.dev.js",
     "deploy": "vercel --prod"
   },
   "dependencies": {
@@ -19,6 +21,7 @@
     "html-loader": "^3.0.0",
     "html-webpack-plugin": "^5.5.0",
     "lil-gui": "^0.11.0",
+    "memfs": "^4.51.1",
     "mini-css-extract-plugin": "^2.4.3",
     "portfinder-sync": "0.0.2",
     "postprocessing": "^6.26.3",
@@ -27,9 +30,9 @@
     "style-loader": "^3.3.1",
     "three": "^0.139.0",
     "vercel": "^23.1.2",
-    "webpack": "^5.60.0",
-    "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.4.0",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2",
     "webpack-merge": "^5.8.0"
   }
 }
