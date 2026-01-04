@@ -65,11 +65,14 @@ export default class RamenShop
         
 
         // Glow Lights
-        this.chinese = this.model.children.find(child => child.name === 'chinese') 
+        this.chinese = this.model.children.find(child => child.name === 'chinese')
         this.neonBlue = this.model.children.find(child => child.name === 'neonBlue')
         this.neonPink = this.model.children.find(child => child.name === 'neonPink')
         this.neonYellow = this.model.children.find(child => child.name === 'neonYellow')
         this.neonGreen = this.model.children.find(child => child.name === 'neonGreen')
+
+        // Find text mesh for JESSE'S RAMEN sign
+        this.jessesRamenText = this.model.children.find(child => child.name === 'Text.007')
         this.portalLight = this.model.children.find(child => child.name === 'portalLight')
         this.storageLight = this.model.children.find(child => child.name === 'storageLight')
         this.poleLight = this.model.children.find(child => child.name === 'poleLight')
@@ -145,7 +148,9 @@ export default class RamenShop
             // Glow lights
             this.chinese.material = this.materials.greenSignMaterial
             this.neonBlue.material = this.materials.neonBlueMaterial
+            // Create custom sign to cover the original
             this.neonPink.material = this.materials.neonPinkMaterial
+            this.createCustomSign()
             this.neonYellow.material = this.materials.neonYellowMaterial
             this.neonGreen.material = this.materials.neonGreenMaterial
             this.portalLight.material = this.materials.neonBlueMaterial
@@ -199,5 +204,26 @@ export default class RamenShop
     {
         this.materials = this.experience.materials
         this.easelFrontGraphic.material = this.materials.easelMaterial
+    }
+
+    createCustomSign()
+    {
+        // Create solid box to cover the sign (has depth)
+        const geometry = new THREE.BoxGeometry(4.0, 0.7, 0.1)
+        const material = new THREE.MeshBasicMaterial({
+            color: 0x0a2a3a
+        })
+
+        const signCover = new THREE.Mesh(geometry, material)
+        signCover.renderOrder = 999
+
+        // Position
+        signCover.position.set(-2.39, 1.05, -0.95)
+        signCover.rotation.y = Math.PI / 2
+
+        this.scene.add(signCover)
+        this.customSign = signCover
+
+        console.log('Custom sign created at position:', signCover.position)
     }
 }
