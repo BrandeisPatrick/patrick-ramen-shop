@@ -208,22 +208,54 @@ export default class RamenShop
 
     createCustomSign()
     {
-        // Create solid box to cover the sign (has depth)
-        const geometry = new THREE.BoxGeometry(4.0, 0.7, 0.1)
-        const material = new THREE.MeshBasicMaterial({
-            color: 0x0a2a3a
-        })
-
-        const signCover = new THREE.Mesh(geometry, material)
+        // Create solid box to cover the sign
+        const boxGeometry = new THREE.BoxGeometry(4.0, 0.7, 0.1)
+        const boxMaterial = new THREE.MeshBasicMaterial({ color: 0x0a2a3a })
+        const signCover = new THREE.Mesh(boxGeometry, boxMaterial)
         signCover.renderOrder = 999
-
-        // Position
         signCover.position.set(-2.39, 1.05, -0.95)
         signCover.rotation.y = Math.PI / 2
-
         this.scene.add(signCover)
         this.customSign = signCover
 
-        console.log('Custom sign created at position:', signCover.position)
+        // Create canvas for text
+        const canvas = document.createElement('canvas')
+        const context = canvas.getContext('2d')
+        canvas.width = 1024
+        canvas.height = 256
+
+        // Transparent background
+        context.clearRect(0, 0, canvas.width, canvas.height)
+
+        // Draw glow effect
+        context.shadowColor = '#FF3DCB'
+        context.shadowBlur = 20
+        context.shadowOffsetX = 0
+        context.shadowOffsetY = 0
+
+        // Draw text with digital/monospace style
+        context.fillStyle = '#FF3DCB'
+        context.font = 'bold 120px "Courier New", monospace'
+        context.textAlign = 'center'
+        context.textBaseline = 'middle'
+        context.fillText("PATRICK BLOG", canvas.width / 2, canvas.height / 2)
+
+        // Draw again for stronger glow
+        context.fillText("PATRICK BLOG", canvas.width / 2, canvas.height / 2)
+
+        // Create texture from canvas
+        const texture = new THREE.CanvasTexture(canvas)
+
+        // Create text plane
+        const textGeometry = new THREE.PlaneGeometry(3.5, 0.6)
+        const textMaterial = new THREE.MeshBasicMaterial({
+            map: texture,
+            transparent: true,
+            side: THREE.DoubleSide
+        })
+        const textPlane = new THREE.Mesh(textGeometry, textMaterial)
+        textPlane.position.set(-2.45, 1.05, -0.95)
+        textPlane.rotation.y = -Math.PI / 2
+        this.scene.add(textPlane)
     }
 }

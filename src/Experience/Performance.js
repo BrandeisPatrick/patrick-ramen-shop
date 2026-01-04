@@ -58,7 +58,6 @@ export default class Performance
 
         // Check Performance
         this.frameRate = 1000/this.frameTime
-        console.log(this.frameRate)
 
         if (this.frameRate <= 20 && this.windowOpen === true) 
         {
@@ -117,7 +116,6 @@ export default class Performance
 
     removeReflections()
     {
-        console.log(this.experience.world.reflections.groundMirror)
         this.experience.scene.remove(this.experience.world.reflections.groundMirror)
         this.experience.world.reflections.groundMirror.material.dispose()
     }
