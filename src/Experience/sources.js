@@ -125,8 +125,8 @@ export default [
 
     {
         name: 'bigScreenAboutMeMobileTexture',
-        type: 'KTX2Texture',
-        path: 'textures/screens/aboutMeScreens/bigScreenAboutMobile.ktx2'
+        type: 'texture',
+        path: 'textures/screens/aboutMeScreens/bigScreenAboutMobile.png'
     },
 
     {
