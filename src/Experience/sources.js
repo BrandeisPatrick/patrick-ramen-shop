@@ -107,8 +107,8 @@ export default [
 
     {
         name: 'bigScreenAboutMeTexture',
-        type: 'KTX2Texture',
-        path: 'textures/screens/aboutMeScreens/bigScreenAbout.ktx2'
+        type: 'texture',
+        path: 'textures/screens/aboutMeScreens/bigScreenAbout.png'
     },
 
     {

@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run dev:*)",
+      "WebSearch",
+      "WebFetch(domain:jesse-zhou.medium.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(dir \"C:\\\\Users\\\\brand\\\\Documents\\\\GitHub\\\\vibe\\\\patrick-ramen-shop\\\\static\\\\textures\\\\screens\\\\aboutMeScreens\")",
+      "Bash(where:*)",
+      "Bash(git checkout:*)",
+      "Bash(wc:*)",
+      "Bash(du:*)",
+      "Bash(find:*)",
+      "Bash(Remove-Item -Force)",
+      "Bash(dir:*)",
+      "Bash(ren \"C:\\\\Users\\\\brand\\\\Documents\\\\GitHub\\\\vibe\\\\patrick-ramen-shop\\\\static\\\\textures\\\\screens\\\\aboutMeScreens\\\\bigScreenAbout.png.png\" \"bigScreenAbout.png\")"
+    ]
+  }
+}
